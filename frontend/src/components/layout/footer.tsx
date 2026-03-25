@@ -184,7 +184,7 @@ const Footer = ({ data, dir }: FooterProps) => {
             <div className="text-center sm:text-right space-y-2">
               <div className="flex gap-4 text-sm justify-center sm:justify-end">
                 <Link href="#">Privacy Policy</Link>
-                <Link href="#">Terms & Conditions</Link>
+                <Link href="#">Terms & Condition</Link>
               </div>
 
               <p className="text-xs text-gray-500">
