@@ -8,15 +8,15 @@ import HighlightHeading from "./section-heading";
 
 export function Hero(data: Readonly<HeroProps>) {
   if (!data) return null;
-  const { text, image } = data;
+  const { text, image, locale } = data;
   const video = "/herovideo.mp4";
+
   return (
     <section
       id="home"
       className="hero relative min-h-screen flex items-center justify-center w-full animate-fadeIn"
     >
       {/* Background Video with Fallback */}
-
       <div className="absolute inset-0 -z-10 lg:hidden">
         {image && (
           <StrapiImage
@@ -42,7 +42,6 @@ export function Hero(data: Readonly<HeroProps>) {
           />
         }
       </div>
-
       <div className="absolute inset-0 -z-10 bg-black/70 lg:bg-black/5" />
       <div className="relative z-10 flex flex-col min-h-screen">
         <div
@@ -50,27 +49,28 @@ export function Hero(data: Readonly<HeroProps>) {
                    px-6 md:px-12 pb-20 pt-10"
         >
           {/* Headline */}
-          {/* <h1
-            className="md:text-6xl font-semibold   text-4xl lg:text-6xl leading-tight
-                     tracking-tight text-white max-w-3xl mx-auto "
-          >
-            {heading}
-          </h1> */}
 
-          <h1 className="md:text-6xl font-semibold text-4xl lg:text-6xl leading-tight tracking-tight text-white text-center">
-            Securing Your Network,
-            <br />
-            With Cybersecurity
-            <br />
-            Expertise.
-          </h1>
+          {locale === "en" ? (
+            <h1 className="md:text-6xl font-semibold text-4xl lg:text-6xl leading-tight tracking-tight text-white text-center">
+              Securing Your Network,
+              <br />
+              With Cybersecurity
+              <br />
+              Expertise.
+            </h1>
+          ) : (
+            <h1 className="md:text-6xl font-semibold text-4xl lg:text-6xl leading-tight tracking-tight text-white text-center">
+              تأمين شبكتك عبر خبرات <br />
+              الأمن السيبراني
+            </h1>
+          )}
 
           <p className="text-lg md:text-xl text-white/85 max-w-2xl mx-auto mt-7 leading-relaxed">
             {text}
           </p>
 
           {/* CTA */}
-          <div className="mt-10">{/* <CTAButton cta={cta} /> */}</div>
+          {/* <div className="mt-10"><CTAButton cta={cta} /></div> */}
         </div>
       </div>
     </section>

@@ -7,10 +7,10 @@ import SolutionSection from "./layout/solution-section";
 import WhyChoosUsSection from "./layout/why-choose-us";
 import ServiceDetailSection from "./layout/service-detail-section";
 
-function blockRenderer(block: Block, index: number) {
+function blockRenderer(block: Block, index: number, locale: string) {
   switch (block.__component) {
     case "layout.hero":
-      return <Hero key={index} {...block} />;
+      return <Hero key={index} {...block} locale={locale} />;
     case "layout.choose-us-section":
       return <WhyChoosUsSection key={index} {...block} />;
     case "layout.content-with-image":
@@ -27,6 +27,23 @@ function blockRenderer(block: Block, index: number) {
   }
 }
 
-export function BlockRenderer({ blocks }: { blocks: Block[] }) {
-  return blocks.map((block, index) => blockRenderer(block, index));
+// export function BlockRenderer({
+//   locale,
+//   blocks,
+// }: {
+//   locale: string;
+//   blocks: Block[];
+// }) {
+//   return blocks.map((block, index) => blockRenderer(block, index));
+
+// }
+
+export function BlockRenderer({
+  locale,
+  blocks,
+}: {
+  locale: string;
+  blocks: Block[];
+}) {
+  return blocks.map((block, index) => blockRenderer(block, index, locale));
 }

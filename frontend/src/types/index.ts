@@ -57,6 +57,8 @@ export interface HeroProps extends Base<"layout.hero"> {
   heading: string;
   text: string;
   topLink?: NavLink;
+  locale: string;
+
   buttonLink?: NavLink[];
   image: {
     url: string;

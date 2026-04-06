@@ -4,7 +4,7 @@ import { useState, useEffect } from "react";
 import { ChevronDown, ChevronRight, Menu, X } from "lucide-react";
 import Link from "next/link";
 import { StrapiImage } from "@/components/custom/StrapiImage";
-// import { LanguageSelector } from "./language-selector";
+import { LanguageSelector } from "./language-selector";
 
 import { Image, NavLink, SubNav } from "@/types";
 import { usePathname } from "next/navigation";
@@ -207,7 +207,7 @@ export default function Navigation({ data, locale }: HeaderProps) {
           </nav>
 
           <div className="hidden md:flex items-center gap-4">
-            {/* <LanguageSelector /> */}
+            <LanguageSelector />
             <Link
               href={`/${locale}/contact`}
               className="text-white font-medium overflow-hidden shadow-lg bg-[radial-gradient(circle_at_30%_30%,#AC1B1B_0%,#731212_52%,#460B0B_95%)] hover:brightness-110  inline-flex items-center justify-center h-9 px-4 py-2 rounded-md text-sm transition-colors"
@@ -219,7 +219,7 @@ export default function Navigation({ data, locale }: HeaderProps) {
           </div>
 
           <div className="flex md:hidden items-center gap-2">
-            {/* <LanguageSelector /> */}
+            <LanguageSelector />
 
             <button
               aria-label="Toggle menu"

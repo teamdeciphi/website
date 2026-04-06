@@ -39,7 +39,7 @@ export default async function Home({ params }: { params: { locale: string } }) {
           }}
         />
       )}
-      <BlockRenderer blocks={blocks} />
+      <BlockRenderer locale={locale} blocks={blocks} />
     </div>
   );
 }
