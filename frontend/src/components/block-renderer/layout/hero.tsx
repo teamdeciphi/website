@@ -8,7 +8,8 @@ import HighlightHeading from "./section-heading";
 
 export function Hero(data: Readonly<HeroProps>) {
   if (!data) return null;
-  const { heading, text, image, video } = data;
+  const { text, image } = data;
+  const video = "/herovideo.mp4";
   return (
     <section
       id="home"
@@ -32,13 +33,14 @@ export function Hero(data: Readonly<HeroProps>) {
       {/* Video for desktop */}
       <div className="hidden lg:block">
         {/* <BackgroundVideo src={videoUrl || ""} /> */}
-        {video && (
+        {
           <BackgroundVideo
-            src={getStrapiMedia(video?.url || "") || ""}
+            // src={getStrapiMedia(video?.url || "") || ""}
+            src={video || ""}
             overlay={true}
             crossfadeDuration={1.8} // seconds — tune to your video
           />
-        )}
+        }
       </div>
 
       <div className="absolute inset-0 -z-10 bg-black/70 lg:bg-black/5" />
