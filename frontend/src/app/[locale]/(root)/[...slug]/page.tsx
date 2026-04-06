@@ -74,5 +74,5 @@ export default async function PageBySlugRoute({ params }: PageProps) {
   const blocks = page?.blocks;
 
   if (!blocks) return <NotFoundPage />;
-  return <BlockRenderer blocks={blocks} />;
+  return <BlockRenderer locale={locale} blocks={blocks} />;
 }
