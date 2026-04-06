@@ -17,9 +17,9 @@ export function Hero(data: Readonly<HeroProps>) {
 
       <div className="absolute inset-0 -z-10 lg:hidden">
         {image && (
-          <Image
-            src={"/deciphicybersecurity.jpg"}
-            alt={"Fallback hero image"}
+          <StrapiImage
+            src={getStrapiMedia(image?.url || "") || ""}
+            alt={image?.alternativeText || "Fallback hero image"}
             className="object-cover w-full h-full"
             width={10}
             height={1080}
