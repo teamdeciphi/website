@@ -4,6 +4,7 @@ import { StrapiImage } from "@/components/custom/StrapiImage";
 import BackgroundVideo from "../blocks/heroVideo";
 import { getStrapiMedia } from "@/lib/utils";
 import Image from "next/image";
+import HighlightHeading from "./section-heading";
 
 export function Hero(data: Readonly<HeroProps>) {
   if (!data) return null;
@@ -47,12 +48,21 @@ export function Hero(data: Readonly<HeroProps>) {
                    px-6 md:px-12 pb-20 pt-10"
         >
           {/* Headline */}
-          <h1
-            className="text-4xl md:text-5xl lg:text-6xl font-medium leading-tight
+          {/* <h1
+            className="md:text-6xl font-semibold   text-4xl lg:text-6xl leading-tight
                      tracking-tight text-white max-w-3xl mx-auto "
           >
             {heading}
+          </h1> */}
+
+          <h1 className="md:text-6xl font-semibold text-4xl lg:text-6xl leading-tight tracking-tight text-white text-center">
+            Securing Your Network,
+            <br />
+            With Cybersecurity
+            <br />
+            Expertise.
           </h1>
+
           <p className="text-lg md:text-xl text-white/85 max-w-2xl mx-auto mt-7 leading-relaxed">
             {text}
           </p>
