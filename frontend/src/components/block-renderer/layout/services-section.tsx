@@ -99,7 +99,8 @@ function ServicesCardsClient({ servicecard }: { servicecard: ServiceCard[] }) {
                   <StrapiImage
                     src={servicecard[1]?.images?.[0]?.url || ""}
                     alt={
-                      servicecard[1]?.images?.[0]?.alternativeText || "Assessment"
+                      servicecard[1]?.images?.[0]?.alternativeText ||
+                      "Assessment"
                     }
                     className="h-48 object-cover"
                   />
@@ -283,6 +284,7 @@ export default function ServiceSection(data: Readonly<ServicesProps>) {
     <>
       {" "}
       <section
+        id="services"
         className="relative bg-gray-50 py-24 px-4 overflow-hidden"
         aria-labelledby="services-heading"
       >
@@ -310,7 +312,11 @@ export default function ServiceSection(data: Readonly<ServicesProps>) {
 
             {/* Main Heading */}
 
-            <HighlightHeading id="services-heading" segments={heading} />
+            <HighlightHeading
+              className="leading-normal"
+              id="services-heading"
+              segments={heading}
+            />
 
             {/* Description */}
 

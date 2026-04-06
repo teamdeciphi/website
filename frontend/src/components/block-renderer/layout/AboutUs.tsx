@@ -41,10 +41,10 @@ export default function AboutSection({ ...data }: Readonly<AboutUsProps>) {
           <div className="absolute inset-0 bg-linear-to-t from-black/70 via-black/20 to-transparent" />
 
           {/* stats */}
-          <figcaption className="absolute bottom-0 left-0 right-0 px-8 pb-8 text-white">
+          <figcaption className="absolute bottom-0 left-0 right-0 px-8 pb-10 text-white">
             <div className="border-t border-white/10 mb-5" />
 
-            <dl className="grid grid-cols-2 gap-x-8 gap-y-4 max-w-md">
+            <dl className="grid grid-cols-2 gap-x-2 gap-y-4  lg:max-w-md ">
               {cardtext.map((stat, i) => (
                 <div key={i}>
                   <dt className="sr-only">{stat.label}</dt>
@@ -63,7 +63,7 @@ export default function AboutSection({ ...data }: Readonly<AboutUsProps>) {
 
           {/* status badge */}
           <div
-            className="absolute bottom-8 right-6 flex items-center gap-2
+            className="absolute bottom-2 lg:bottom-6 right-6 flex items-center gap-2
             bg-white rounded-full px-4 py-2 shadow-xl"
             aria-label={indicatorlabel}
           >
@@ -87,7 +87,7 @@ export default function AboutSection({ ...data }: Readonly<AboutUsProps>) {
             <HighlightHeading
               id="about-heading"
               segments={heading}
-              className="rtl:leading-relaxed"
+              className="leading-normal rtl:leading-relaxed"
             />
           </header>
 
@@ -98,7 +98,7 @@ export default function AboutSection({ ...data }: Readonly<AboutUsProps>) {
           </Typography>
 
           {/* features */}
-          <ul className="grid grid-cols-2 gap-x-8 gap-y-4 pt-1">
+          <ul className="grid  grid-cols-1 md:grid-cols-2  gap-x-8 gap-y-4 pt-1">
             {feature?.map((f) => {
               const Icon = getIcon(f.icon as IconName);
 

@@ -3,6 +3,7 @@ import type { HeroProps } from "@/types";
 import { StrapiImage } from "@/components/custom/StrapiImage";
 import BackgroundVideo from "../blocks/heroVideo";
 import { getStrapiMedia } from "@/lib/utils";
+import Image from "next/image";
 
 export function Hero(data: Readonly<HeroProps>) {
   if (!data) return null;
@@ -16,10 +17,12 @@ export function Hero(data: Readonly<HeroProps>) {
 
       <div className="absolute inset-0 -z-10 lg:hidden">
         {image && (
-          <StrapiImage
-            src={getStrapiMedia(image?.url) || "/fallback-hero.jpg"}
-            alt={image?.alternativeText || "Fallback hero image"}
-            className="object-cover"
+          <Image
+            src={"/deciphicybersecurity.jpg"}
+            alt={"Fallback hero image"}
+            className="object-cover w-full h-full"
+            width={10}
+            height={1080}
             priority
           />
         )}
