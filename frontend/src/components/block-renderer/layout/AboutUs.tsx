@@ -37,9 +37,7 @@ export default function AboutSection({ ...data }: Readonly<AboutUsProps>) {
             className="absolute inset-0 w-full h-full object-cover"
             priority
           />
-          {getStrapiMedia(cardImage?.url || "")} getsta
-          {getStrapiURL()} stapi url
-          {cardImage?.url}
+
           {/* gradient overlay */}
           <div className="absolute inset-0 bg-linear-to-t from-black/70 via-black/20 to-transparent" />
           {/* stats */}

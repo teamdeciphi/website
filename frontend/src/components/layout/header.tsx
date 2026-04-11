@@ -123,7 +123,6 @@ export default function Navigation({ data, locale }: HeaderProps) {
   }`}
         >
           <Link href={`/${locale}`} aria-label="Homepage">
-            {logo?.url}
             <StrapiImage
               alt={logo?.alternativeText ?? "Company logo"}
               src={logo?.url}

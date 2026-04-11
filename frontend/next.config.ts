@@ -11,8 +11,9 @@ const nextConfig: NextConfig = {
     }),
     remotePatterns: [
       {
-        protocol: "https",
-        hostname: "api.deciphone.com",
+        protocol: "http",
+        hostname: "3.110.86.248",
+        port: "1337",
         pathname: "/uploads/**",
       },
     ],
