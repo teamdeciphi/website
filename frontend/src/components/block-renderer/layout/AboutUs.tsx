@@ -37,16 +37,11 @@ export default function AboutSection({ ...data }: Readonly<AboutUsProps>) {
             className="absolute inset-0 w-full h-full object-cover"
             priority
           />
-
-          {getStrapiMedia(cardImage?.url || "")}
-
-          {getStrapiURL() +}
-
+          {getStrapiMedia(cardImage?.url || "")} getsta
+          {getStrapiURL()} stapi url
           {cardImage?.url}
-
           {/* gradient overlay */}
           <div className="absolute inset-0 bg-linear-to-t from-black/70 via-black/20 to-transparent" />
-
           {/* stats */}
           <figcaption className="absolute bottom-0 left-0 right-0 px-8 pb-10 text-white">
             <div className="border-t border-white/10 mb-5" />
@@ -67,7 +62,6 @@ export default function AboutSection({ ...data }: Readonly<AboutUsProps>) {
               ))}
             </dl>
           </figcaption>
-
           {/* status badge */}
           <div
             className="absolute bottom-2 lg:bottom-6 right-6 flex items-center gap-2
