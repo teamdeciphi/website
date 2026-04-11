@@ -37,6 +37,8 @@ export default function AboutSection({ ...data }: Readonly<AboutUsProps>) {
             priority
           />
 
+          {cardImage?.url}
+
           {/* gradient overlay */}
           <div className="absolute inset-0 bg-linear-to-t from-black/70 via-black/20 to-transparent" />
 
