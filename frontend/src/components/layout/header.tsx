@@ -19,56 +19,56 @@ interface HeaderProps {
   locale: string;
 }
 
-// function MobileSubmenu({
-//   items,
-//   isOpen,
-// }: {
-//   items?: SubNav[];
-//   isOpen: boolean;
-// }) {
-//   if (!isOpen || !items?.length) return null;
+function MobileSubmenu({
+  items,
+  isOpen,
+}: {
+  items?: SubNav[];
+  isOpen: boolean;
+}) {
+  if (!isOpen || !items?.length) return null;
 
-//   return (
-//     <div className="overflow-hidden">
-//       <div className="mx-3 mt-1 mb-2 pl-3 border-l-2 border-[#8B1A1A]/40 flex flex-col">
-//         {items.map((sub, i) => {
-//           const Icon = getIcon(sub.icon as IconName);
+  return (
+    <div className="overflow-hidden">
+      <div className="mx-3 mt-1 mb-2 pl-3 border-l-2 border-[#8B1A1A]/40 flex flex-col">
+        {items.map((sub, i) => {
+          const Icon = getIcon(sub.icon as IconName);
 
-//           const href = sub.href ?? "#";
+          const href = sub.href ?? "#";
 
-//           return (
-//             <Link key={sub.name} href={href} prefetch={false}>
-//               <div
-//                 className="flex items-center gap-3 px-3 py-2.5 rounded-xl
-//                 text-white/70 hover:text-white hover:bg-white/10
-//                 text-sm transition-colors group"
-//               >
-//                 <span
-//                   className="mt-0.5 shrink-0 w-10 h-10 rounded-xl
-//                   bg-[#F3F3F3] border border-[#d6d1cb9e]
-//                   flex items-center justify-center
-//                   transition-all duration-200
-//                   group-hover:border-[#8B1A1A]/40"
-//                 >
-//                   {Icon && <Icon size={14} className="text-[#E15241]" />}
-//                 </span>
+          return (
+            <Link key={sub.name} href={href} prefetch={false}>
+              <div
+                className="flex items-center gap-3 px-3 py-2.5 rounded-xl
+                text-white/70 hover:text-white hover:bg-white/10
+                text-sm transition-colors group"
+              >
+                <span
+                  className="mt-0.5 shrink-0 w-10 h-10 rounded-xl
+                  bg-[#F3F3F3] border border-[#d6d1cb9e]
+                  flex items-center justify-center
+                  transition-all duration-200
+                  group-hover:border-[#8B1A1A]/40"
+                >
+                  {Icon && <Icon size={14} className="text-[#E15241]" />}
+                </span>
 
-//                 <span className="min-w-0">
-//                   <span className="block text-sm font-medium truncate">
-//                     {sub.name}
-//                   </span>
-//                   <span className="block text-xs text-white/40 truncate">
-//                     {sub.desc}
-//                   </span>
-//                 </span>
-//               </div>
-//             </Link>
-//           );
-//         })}
-//       </div>
-//     </div>
-//   );
-// }
+                <span className="min-w-0">
+                  <span className="block text-sm font-medium truncate">
+                    {sub.name}
+                  </span>
+                  <span className="block text-xs text-white/40 truncate">
+                    {sub.desc}
+                  </span>
+                </span>
+              </div>
+            </Link>
+          );
+        })}
+      </div>
+    </div>
+  );
+}
 
 export default function Navigation({ data, locale }: HeaderProps) {
   const [scrolled, setScrolled] = useState(false);
@@ -154,14 +154,14 @@ export default function Navigation({ data, locale }: HeaderProps) {
                   >
                     {item.text}
 
-                    {/* {hasSubmenu && (
+                    {hasSubmenu && (
                       <span>
                         <ChevronDown size={13} />
                       </span>
-                    )} */}
+                    )}
                   </Link>
 
-                  {/* <>
+                  <>
                     {hasSubmenu && activeMenu === item.text && (
                       <div className="absolute top-full left-1/2 -translate-x-1/2 pt-4 z-50 w-145">
                         <div className="relative bg-white rounded-md shadow-xl border p-2 grid grid-cols-2 gap-2">
@@ -200,7 +200,7 @@ export default function Navigation({ data, locale }: HeaderProps) {
                         </div>
                       </div>
                     )}
-                  </> */}
+                  </>
                 </div>
               );
             })}
@@ -270,18 +270,18 @@ export default function Navigation({ data, locale }: HeaderProps) {
                           className="w-full flex justify-between px-4 py-3 rounded-xl text-sm font-medium text-white/80 hover:bg-white/8"
                         >
                           {item.text}
-                          {/* <ChevronDown
+                          <ChevronDown
                             size={15}
                             className={`transition ${
                               isExpanded ? "rotate-180" : ""
                             }`}
-                          /> */}
+                          />
                         </button>
 
-                        {/* <MobileSubmenu
+                        <MobileSubmenu
                           items={item.subnav}
                           isOpen={isExpanded}
-                        /> */}
+                        />
                       </>
                     ) : (
                       <Link
