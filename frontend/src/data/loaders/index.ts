@@ -1,8 +1,22 @@
 import sdk from "@/lib/sdk";
+import {
+  hardcodedGlobalData,
+  hardcodedLandingPage,
+} from "@/data/hardcoded";
 
 const PAGE_SIZE = 4;
 
-export async function getGlobalPageData(locale: string) {
+export async function getGlobalPageData(_locale: string) {
+  return hardcodedGlobalData;
+}
+
+export async function getLandingPage(_locale: string) {
+  return hardcodedLandingPage;
+}
+
+// Original API implementations kept below for reference
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
+async function _getGlobalPageDataFromAPI(locale: string) {
   const landingPage = await sdk.single("global").find({
     locale,
     populate: {
@@ -37,7 +51,8 @@ export async function getGlobalPageData(locale: string) {
   return landingPage;
 }
 
-export async function getLandingPage(locale: string) {
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
+async function _getLandingPageFromAPI(locale: string) {
   let landingPage;
   try {
     landingPage = await sdk.single("landing-page").find({

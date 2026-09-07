@@ -125,7 +125,7 @@ export default function Navigation({ data, locale }: HeaderProps) {
           <Link href={`/${locale}`} aria-label="Homepage">
             <StrapiImage
               alt={logo?.alternativeText ?? "Company logo"}
-              src={logo?.url}
+              src={"/deciphi-logo.svg"}
               className="h-10 w-auto object-contain"
               priority
             />

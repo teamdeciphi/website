@@ -23,8 +23,8 @@ export function StrapiImage({
   width?: number;
   height?: number;
 }) {
-  const resolved = resolveSrc(src);
-  if (!resolved) return null;
+  // const resolved = resolveSrc(src);
+  // if (!resolved) return null;
   return (
     // <Image
     //   width={800}
@@ -36,7 +36,7 @@ export function StrapiImage({
     //   sizes="(max-width:768px) 100vw, 800px"
     // />
     <Image
-      src={resolved}
+      src={src ?? "/deciphi-logo.svg"}
       alt={alt}
       priority={priority}
       height={height}
@@ -47,13 +47,13 @@ export function StrapiImage({
   );
 }
 
-export function getStrapiURL() {
-  return process.env.NEXT_PUBLIC_STRAPI_URL ?? "http://localhost:1337";
-}
+// export function getStrapiURL() {
+//   return process.env.NEXT_PUBLIC_STRAPI_URL ?? "http://localhost:1337";
+// }
 
-export function getStrapiMedia(url: string | null) {
-  if (url == null) return null;
-  if (url.startsWith("data:")) return url;
-  if (url.startsWith("http") || url.startsWith("//")) return url;
-  return `${getStrapiURL()}${url}`;
-}
+// export function getStrapiMedia(url: string | null) {
+//   if (url == null) return null;
+//   if (url.startsWith("data:")) return url;
+//   if (url.startsWith("http") || url.startsWith("//")) return url;
+//   return `${getStrapiURL()}${url}`;
+// }
