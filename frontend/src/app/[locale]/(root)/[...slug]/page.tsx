@@ -1,3 +1,4 @@
+import type { Block } from "@/types";
 import { Metadata } from "next";
 import { draftMode } from "next/headers";
 import { getAllPagesSlugs, getPageBySlug } from "@/data/loaders";
@@ -32,10 +33,11 @@ export async function generateMetadata({
 
   const page = await getPage(slug, locale);
 
-  const block = page?.blocks?.find(
-    (b: { __component: string }) =>
-      b.__component === "layout.service-detail-section",
-  );
+  const block = (
+    page?.blocks as
+      | { __component: string; heading?: string | { children: { text: string }[] }[] }[]
+      | undefined
+  )?.find((b) => b.__component === "layout.service-detail-section");
 
   const last = slug.at(-1) ?? "";
 
@@ -74,5 +76,5 @@ export default async function PageBySlugRoute({ params }: PageProps) {
   const blocks = page?.blocks;
 
   if (!blocks) return <NotFoundPage />;
-  return <BlockRenderer locale={locale} blocks={blocks} />;
+  return <BlockRenderer locale={locale} blocks={blocks as Block[]} />;
 }

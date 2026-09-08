@@ -13,7 +13,7 @@ import type { heading, Image as ImageType } from "@/types";
 import { StrapiImage } from "../custom/StrapiImage";
 
 interface TLink {
-  id: string;
+  id: string | number;
   href: string;
   text: string;
   isExternal: boolean;

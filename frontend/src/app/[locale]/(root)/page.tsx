@@ -1,6 +1,7 @@
 import { getLandingPage } from "@/data/loaders";
 import { BlockRenderer } from "@/components/block-renderer";
 import { mapSeoToMetadata } from "@/lib/utils";
+import type { Block } from "@/types";
 
 export async function generateMetadata({
   params,
@@ -39,7 +40,7 @@ export default async function Home({ params }: { params: { locale: string } }) {
           }}
         />
       )}
-      <BlockRenderer locale={locale} blocks={blocks} />
+      <BlockRenderer locale={locale} blocks={blocks as Block[]} />
     </div>
   );
 }
