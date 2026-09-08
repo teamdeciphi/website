@@ -5,7 +5,6 @@ import Image from "next/image";
 import { draftMode } from "next/headers";
 import { ChevronRight, ArrowLeft, Tag, Clock } from "lucide-react";
 import { getBlogPostBySlug, getBlogPosts } from "@/data/loaders";
-import { getStrapiMedia } from "@/lib/utils";
 import BlockRendererClient from "@/components/custom/markdown-text";
 import ShareButtons from "@/components/custom/shareButton";
 import { formatDate } from "@/lib/utils";
@@ -37,9 +36,7 @@ export async function generateMetadata({
   const post = await getPost(slug, locale);
   if (!post) return {};
 
-  const imageUrl = post.image?.url
-    ? (getStrapiMedia(post.image.url) ?? undefined)
-    : undefined;
+  const imageUrl = post.image?.url ? post.image.url : undefined;
 
   return {
     title: `${post.title}`,
@@ -86,7 +83,7 @@ export default async function ArticlePage({ params }: PageProps) {
         {post.image && (
           <Image
             alt={post.title}
-            src={getStrapiMedia(post.image.url) || post.image.url}
+            src={post.image.url}
             fill
             className="object-cover"
             priority
@@ -181,10 +178,7 @@ export default async function ArticlePage({ params }: PageProps) {
                     >
                       <div className="relative w-18 h-14 rounded-lg overflow-hidden shrink-0 bg-gray-100">
                         <Image
-                          src={
-                            getStrapiMedia(relatedPost.image?.url) ||
-                            "/placeholder.png"
-                          }
+                          src={relatedPost.image?.url || "/placeholder.png"}
                           alt={relatedPost.image?.alt || relatedPost.title}
                           fill
                           className="object-cover group-hover:scale-105 transition-transform duration-300"

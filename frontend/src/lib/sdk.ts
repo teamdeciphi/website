@@ -1,6 +1,1 @@
-import { getStrapiURL } from "@/lib/utils";
-import { strapi } from '@strapi/client';
-
-const BASE_API_URL = getStrapiURL() + "/api";
-const sdk = strapi({ baseURL: BASE_API_URL });
-export default sdk;
+export const BASE_API_URL = process.env.NEXT_PUBLIC_API_URL ?? "http://localhost:3001/api";

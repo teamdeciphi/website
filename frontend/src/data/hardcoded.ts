@@ -232,7 +232,7 @@ export const hardcodedLandingPage = {
         image: {
           id: "h1",
           documentId: "hero-img",
-          url: "/globe.svg",
+          url: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRONZ4qrfgIpLyJyCSwQEf8ZlhYZHnyXmI_6IxSO57AlQ&s=10",
           alternativeText: "Cybersecurity hero image",
           name: "hero-image",
         },
@@ -911,7 +911,8 @@ Security awareness is a cultural initiative, not just a training programme.`,
   {
     id: 8,
     documentId: "post-8",
-    title: "Penetration Testing vs Vulnerability Assessment: What's the Difference?",
+    title:
+      "Penetration Testing vs Vulnerability Assessment: What's the Difference?",
     slug: "penetration-testing-vs-vulnerability-assessment",
     description:
       "These two terms are often confused but serve very different purposes. Understand when to use each and what to expect from the engagement.",
@@ -1067,8 +1068,7 @@ export const hardcodedServicePages: Record<string, { blocks: object[] }> = {
         ],
         description:
           "Thorough evaluation of your infrastructure to uncover and remediate security gaps before attackers exploit them.",
-        quote:
-          "Know your vulnerabilities before your adversaries do.",
+        quote: "Know your vulnerabilities before your adversaries do.",
         boldtext: [
           { id: 1, text: "Find gaps. ", highlight: false },
           { id: 2, text: "Fix them fast.", highlight: true },
@@ -1167,7 +1167,10 @@ export const hardcodedServicePages: Record<string, { blocks: object[] }> = {
         points: [
           { id: "p1", point: "Phishing simulation campaigns" },
           { id: "p2", point: "Role-based security awareness modules" },
-          { id: "p3", point: "Executive and board-level cybersecurity briefings" },
+          {
+            id: "p3",
+            point: "Executive and board-level cybersecurity briefings",
+          },
           { id: "p4", point: "Incident response tabletop exercises" },
           { id: "p5", point: "Compliance and regulatory training" },
         ],
@@ -1241,8 +1244,7 @@ export const hardcodedServicePages: Record<string, { blocks: object[] }> = {
         ],
         description:
           "Seamlessly connect and secure your tools, platforms, and infrastructure — without compromising performance.",
-        quote:
-          "Security that works with your systems, not against them.",
+        quote: "Security that works with your systems, not against them.",
         boldtext: [
           { id: 1, text: "Unified. Secure. ", highlight: false },
           { id: 2, text: "Seamless.", highlight: true },
@@ -1415,8 +1417,7 @@ export const hardcodedServicePages: Record<string, { blocks: object[] }> = {
         ],
         description:
           "Securing your cloud workloads, identities, and data across AWS, Azure, and GCP environments.",
-        quote:
-          "The cloud moves fast. Your security needs to move faster.",
+        quote: "The cloud moves fast. Your security needs to move faster.",
         boldtext: [
           { id: 1, text: "Secure cloud, ", highlight: false },
           { id: 2, text: "every layer.", highlight: true },

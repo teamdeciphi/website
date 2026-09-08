@@ -3,7 +3,7 @@ import { Suspense } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { getBlogPosts } from "@/data/loaders";
-import { formatDate, getStrapiMedia } from "@/lib/utils";
+import { formatDate } from "@/lib/utils";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { PaginationComponent } from "@/components/custom/pagination";
@@ -137,9 +137,7 @@ export default async function BlogPage({ params, searchParams }: PageProps) {
                     {item.image && (
                       <div className="relative h-52 w-full">
                         <Image
-                          src={
-                            getStrapiMedia(item.image.url) || "/placeholder.jpg"
-                          }
+                          src={item.image.url || "/placeholder.jpg"}
                           alt={item.image.alternativeText || item.title}
                           fill
                           className="object-cover rounded-t-lg"

@@ -2,7 +2,6 @@ import type { HeroProps } from "@/types";
 
 import { StrapiImage } from "@/components/custom/StrapiImage";
 import BackgroundVideo from "../blocks/heroVideo";
-import { getStrapiMedia } from "@/lib/utils";
 import Image from "next/image";
 import HighlightHeading from "./section-heading";
 
@@ -20,7 +19,7 @@ export function Hero(data: Readonly<HeroProps>) {
       <div className="absolute inset-0 -z-10 lg:hidden">
         {image && (
           <StrapiImage
-            src={getStrapiMedia(image?.url || "") || ""}
+            src={image?.url || ""}
             alt={image?.alternativeText || "Fallback hero image"}
             className="object-cover w-full h-full"
             width={10}
@@ -35,7 +34,6 @@ export function Hero(data: Readonly<HeroProps>) {
         {/* <BackgroundVideo src={videoUrl || ""} /> */}
         {
           <BackgroundVideo
-            // src={getStrapiMedia(video?.url || "") || ""}
             src={video || ""}
             overlay={true}
             crossfadeDuration={1.8} // seconds — tune to your video

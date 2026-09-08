@@ -6,17 +6,6 @@ export function cn(...inputs: ClassValue[]) {
   return twMerge(clsx(inputs));
 }
 
-export function getStrapiURL() {
-  return process.env.NEXT_PUBLIC_STRAPI_URL ?? "http://localhost:1337";
-}
-
-export function getStrapiMedia(url: string | null) {
-  if (url == null) return null;
-  if (url.startsWith("data:")) return url;
-  if (url.startsWith("http") || url.startsWith("//")) return url;
-  return `${getStrapiURL()}${url}`;
-}
-
 export function formatDate(date: string, locale: string) {
   return new Intl.DateTimeFormat(locale === "ar" ? "ar-EG" : "en-US", {
     year: "numeric",
@@ -44,7 +33,7 @@ export function mapSeoToMetadata(seo: any): Metadata {
       images: seo.metaImage?.url
         ? [
             {
-              url: process.env.NEXT_PUBLIC_STRAPI_URL + seo.metaImage.url,
+              url: seo.metaImage.url,
               width: seo.metaImage.width,
               height: seo.metaImage.height,
             },
