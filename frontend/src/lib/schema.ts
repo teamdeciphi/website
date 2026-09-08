@@ -1,46 +1,55 @@
+const BASE_URL = "https://deciphi.com";
+
 export function generateOrganizationSchema(locale: string) {
   return {
-    '@context': 'https://schema.org',
-    '@type': 'Organization',
-    name: 'Your Company Name',
-    url: `https://yourdomain.com/${locale}`,
-    logo: 'https://yourdomain.com/logo.png',
-    description: 'Professional services and solutions for your business needs',
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    name: "Deciphi",
+    url: `${BASE_URL}/${locale}`,
+    logo: `${BASE_URL}/deciphi-logo.svg`,
+    description:
+      "Deciphi delivers cutting-edge cybersecurity solutions to protect your organisation from evolving threats.",
     address: {
-      '@type': 'PostalAddress',
-      addressCountry: locale === 'ar' ? 'AE' : 'US',
+      "@type": "PostalAddress",
+      addressCountry: "QA",
+    },
+    contactPoint: {
+      "@type": "ContactPoint",
+      email: "contact@deciphi.com",
+      telephone: "+97441499289",
+      contactType: "customer support",
     },
     sameAs: [
-      'https://twitter.com/yourcompany',
-      'https://github.com/yourcompany',
-      'https://youtube.com/yourcompany',
+      "https://www.linkedin.com/company/deciphi",
     ],
-  }
+  };
 }
 
 export function generateWebPageSchema(
   title: string,
   description: string,
-  url: string
+  url: string,
 ) {
   return {
-    '@context': 'https://schema.org',
-    '@type': 'WebPage',
+    "@context": "https://schema.org",
+    "@type": "WebPage",
     name: title,
     description,
     url,
-  }
+  };
 }
 
-export function generateBreadcrumbSchema(items: { name: string; url: string }[]) {
+export function generateBreadcrumbSchema(
+  items: { name: string; url: string }[],
+) {
   return {
-    '@context': 'https://schema.org',
-    '@type': 'BreadcrumbList',
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
     itemListElement: items.map((item, index) => ({
-      '@type': 'ListItem',
+      "@type": "ListItem",
       position: index + 1,
       name: item.name,
       item: item.url,
     })),
-  }
+  };
 }

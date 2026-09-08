@@ -5,12 +5,12 @@ import Image from "next/image";
 import { draftMode } from "next/headers";
 import { ChevronRight, ArrowLeft, Tag, Clock } from "lucide-react";
 import { getBlogPostBySlug, getBlogPosts } from "@/data/loaders";
-import { getStrapiMedia } from "@/components/custom/StrapiImage";
+import { getStrapiMedia } from "@/lib/utils";
 import BlockRendererClient from "@/components/custom/markdown-text";
 import ShareButtons from "@/components/custom/shareButton";
 import { formatDate } from "@/lib/utils";
 
-const BASE_URL = "https://yourdomain.com";
+const BASE_URL = "https://deciphi.com";
 
 interface PageProps {
   params: Promise<{ slug: string; locale: string }>;

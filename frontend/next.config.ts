@@ -16,6 +16,22 @@ const nextConfig: NextConfig = {
         port: "1337",
         pathname: "/uploads/**",
       },
+      {
+        protocol: "https",
+        hostname: "images.unsplash.com",
+      },
+      {
+        protocol: "https",
+        hostname: "**.unsplash.com",
+      },
+      {
+        protocol: "https",
+        hostname: "deciphi-pull-zone.b-cdn.net",
+      },
+      {
+        protocol: "https",
+        hostname: "c.ndtvimg.com",
+      },
     ],
   },
 };

@@ -12,7 +12,7 @@ import { Search } from "@/components/custom/search";
 import HighlightHeading from "@/components/block-renderer/layout/section-heading";
 import LoadingPage from "../../loading";
 
-const BASE_URL = "https://yourdomain.com";
+const BASE_URL = "https://deciphi.com";
 
 interface PageProps {
   params: Promise<{ locale: string }>;

@@ -62,7 +62,7 @@ function WhyChooseUsSection({ ...data }: Readonly<WhyChooseUsProps>) {
             <HighlightHeading
               id="about-heading"
               segments={heading}
-              className="rtl:leading-relaxed"
+              className="rtl:leading-relaxed "
             />
           </header>
 
