@@ -232,7 +232,7 @@ export const hardcodedLandingPage = {
         image: {
           id: "h1",
           documentId: "hero-img",
-          url: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRONZ4qrfgIpLyJyCSwQEf8ZlhYZHnyXmI_6IxSO57AlQ&s=10",
+          url: "https://deciphi-pull-zone.b-cdn.net/images.jpeg",
           alternativeText: "Cybersecurity hero image",
           name: "hero-image",
         },
