@@ -5,7 +5,6 @@ import { Typography } from "@/components/ui/typography";
 import { StrapiImage } from "@/components/custom/StrapiImage";
 import { getIcon, IconName } from "@/components/custom/iconMap";
 import OverLine from "@/components/custom/OverLine";
-import { getStrapiMedia, getStrapiURL } from "@/lib/utils";
 
 export default function AboutSection({ ...data }: Readonly<AboutUsProps>) {
   if (!data) return null;

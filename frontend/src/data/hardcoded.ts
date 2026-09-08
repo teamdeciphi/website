@@ -240,7 +240,7 @@ export const hardcodedLandingPage = {
         updatedAt: "",
         label: "About Us",
         description:
-          "We connect the dots — so you don’t have to. Partnering with industry leaders, we design and implement solutions tailored to your business, ensuring resilience and seamless operations without missing a beat.",
+          "We connect the dots, so you do not have to. At Deciphi, we simplify cybersecurity by transforming complex challenges into clear, effective strategies-protecting your operations today while preparing you for tomorrow's threats.",
         indicatorlabel: "Active Protection 24/7",
         heading: [
           { id: 1, text: "Smarter. Safer.  ", highlight: false },
@@ -256,15 +256,15 @@ export const hardcodedLandingPage = {
           // { id: 4, value: "24/7", label: "SOC Monitoring" },
         ],
         feature: [
-          { id: "f1", text: "Expert Solutions ", icon: "ShieldCheck" },
-          { id: "f2", text: "Advanced Defense", icon: "Zap" },
+          { id: "f1", text: "Expert Solutions ", icon: "Sun" },
+          { id: "f2", text: "Advanced Defense", icon: "Lock" },
           { id: "f3", text: "Strategic Consulting", icon: "FileText" },
           { id: "f4", text: "Seamless Integration", icon: "Cloud" },
         ],
         cardImage: {
           id: "a1",
           documentId: "about-img",
-          url: "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?w=800&q=80",
+          url: "https://images.unsplash.com/photo-1560264418-c4445382edbc?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
           alternativeText: "Cybersecurity monitoring dashboard",
           name: "about-image",
         },
@@ -278,18 +278,25 @@ export const hardcodedLandingPage = {
         updatedAt: "",
         label: "Our Services",
         description:
-          "Comprehensive cybersecurity services tailored to your organisation's needs.",
+          "We connect the dots, so you do not have to. At Deciphi, we simplify cybersecurity by transforming complex challenges into clear, effective strategies-protecting your operations today while preparing you for tomorrow's threats.",
         heading: [
           { id: 1, text: "Security  ", highlight: true },
           { id: 2, text: " That Fits", highlight: false },
         ],
+
+        //        ,
+        // IconCloud,
+        // ,IconTraining
+        // ,
+        // IconOT,
+        // ,
         servicecard: [
           {
             id: "sc1",
             heading: "Cybersecurity Consulting",
             description:
               "Get strategic, expert-driven guidance to build and scale a resilient security program that fits your goals.",
-            icon: "ShieldCheck",
+            icon: "IconConsulting",
             href: "/en/consulting",
             images: [
               {
@@ -306,20 +313,21 @@ export const hardcodedLandingPage = {
             heading: "Security Assessment & Testing",
             description:
               "Thorough evaluation of your infrastructure to uncover and remediate security gaps before attackers exploit them.",
-            icon: "Search",
+            icon: "IconAssessment",
             href: "/en/assessment",
             images: [
               {
                 id: "sc2i1",
                 documentId: "sc2-img1",
-                url: "https://images.unsplash.com/photo-1563986768609-322da13575f3?w=600&q=80",
+
+                url: "https://deciphi-pull-zone.b-cdn.net/3099de0aa477b5af3188bed9d56541638939a9ae_6870eb3ff1.avif",
                 alternativeText: "Assessment",
                 name: "assessment-img1",
               },
               {
                 id: "sc2i2",
                 documentId: "sc2-img2",
-                url: "https://images.unsplash.com/photo-1555949963-aa79dcee981c?w=400&q=80",
+                url: "https://deciphi-pull-zone.b-cdn.net/pexels_thisisengineering_3862383_scaled_e1756632630839_04150bba09.avif",
                 alternativeText: "Assessment 2",
                 name: "assessment-img2",
               },
@@ -327,10 +335,10 @@ export const hardcodedLandingPage = {
           },
           {
             id: "sc3",
-            heading: "Security Training",
+            heading: "Cybersecurity Awareness Training ",
             description:
-              "Empower your workforce with up-to-date security awareness programmes and hands-on technical training.",
-            icon: "BookOpen",
+              "Empower your team with practical training that turns your people into your first line of defense.",
+            icon: "IconAssessment",
             href: "/en/training",
             images: [
               {
@@ -344,16 +352,16 @@ export const hardcodedLandingPage = {
           },
           {
             id: "sc4",
-            heading: "Managed Security",
+            heading: "System     Integration ",
             description:
-              "Round-the-clock monitoring and response through our dedicated Security Operations Centre.",
-            icon: "Monitor",
+              "Seamlessly connect and secure your tools, platforms, and infrastructure—without compromising performance.",
+            icon: "IconTraining",
             href: "/en/managed-security",
             images: [
               {
                 id: "sc4i1",
                 documentId: "sc4-img",
-                url: "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=500&q=80",
+                url: "https://deciphi-pull-zone.b-cdn.net/65e163ee818a060ecccc5290_breachsight-scanlines%25401.5x.png.png",
                 alternativeText: "Managed Security",
                 name: "managed-security-img",
               },
@@ -381,7 +389,7 @@ export const hardcodedLandingPage = {
             heading: "Cloud Security",
             description:
               "Securing your cloud workloads, identities, and data across AWS, Azure, and GCP environments.",
-            icon: "Cloud",
+            icon: "IconCloud",
             href: "/en/cloud-security",
             images: [
               {
@@ -404,18 +412,18 @@ export const hardcodedLandingPage = {
         updatedAt: "",
         label: "Solutions",
         description:
-          "End-to-end security solutions designed for modern threats.",
+          "We design cybersecurity solutions around your unique needs—no templates, no fluff. Just smart, effective protection that fits your business.",
         heading: [
-          { id: 1, text: "Our ", highlight: false },
-          { id: 2, text: "Security Solutions", highlight: true },
+          { id: 1, text: "Built ", highlight: false },
+          { id: 2, text: "for You ", highlight: true },
         ],
         accordian: [
           {
             id: "item-0",
-            icon: "ShieldCheck",
-            heading: "Zero-Trust Architecture",
+            icon: "IdCard",
+            heading: "Identity and Access Management (IAM)",
             description:
-              "Implement a never-trust, always-verify approach to limit lateral movement and reduce your attack surface.",
+              "At Deciphi, we offer more than just cybersecurity—we provide peace of mind.Backed by real-world experience and deep technical expertise, we tailor solutions that protect your people, systems, and data.",
             points: [
               { id: "p1", point: "Identity-centric access control" },
               { id: "p2", point: "Micro-segmentation" },
@@ -431,8 +439,8 @@ export const hardcodedLandingPage = {
           },
           {
             id: "item-1",
-            icon: "Eye",
-            heading: "Threat Detection & Response",
+            icon: "Globe",
+            heading: "Network Security",
             description:
               "Advanced SIEM and SOAR integration that detects, correlates, and responds to threats in real time.",
             points: [
@@ -450,10 +458,10 @@ export const hardcodedLandingPage = {
           },
           {
             id: "item-2",
-            icon: "FileText",
-            heading: "Compliance & Governance",
+            icon: "Database",
+            heading: "Data Security",
             description:
-              "Navigate complex regulatory landscapes with our compliance frameworks covering ISO 27001, NCA, NIST, and more.",
+              "Safeguard sensitive data wherever it lives—at rest, in transit, or in use-through encryption, DLP policies, and rigorous classification frameworks.",
             points: [
               { id: "p7", point: "Gap analysis & roadmap" },
               { id: "p8", point: "Policy & procedure development" },
@@ -465,6 +473,63 @@ export const hardcodedLandingPage = {
               url: "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=700&q=80",
               alternativeText: "Compliance",
               name: "compliance-img",
+            },
+          },
+          {
+            id: "item-5",
+            icon: "Shield",
+            heading: "Endpoint Security",
+            description:
+              "Advanced SIEM and SOAR integration that detects, correlates, and responds to threats in real time.",
+            points: [
+              { id: "p4", point: "Real-time threat intelligence" },
+              { id: "p5", point: "Automated incident playbooks" },
+              { id: "p6", point: "Mean time to detect < 10 min" },
+            ],
+            image: {
+              id: "acc2",
+              documentId: "acc2-img",
+              url: "https://images.unsplash.com/photo-1510511459019-5dda7724fd87?w=700&q=80",
+              alternativeText: "Threat Detection",
+              name: "tdr-img",
+            },
+          },
+          {
+            id: "item-3",
+            icon: "Cloud",
+            heading: "Cloud Security",
+            description:
+              "End-to-end cloud security from configuration reviews to runtime protection, ensuring your cloud environments stay compliant and secure at every layer.",
+            points: [
+              { id: "p4", point: "Real-time threat intelligence" },
+              { id: "p5", point: "Automated incident playbooks" },
+              { id: "p6", point: "Mean time to detect < 10 min" },
+            ],
+            image: {
+              id: "acc2",
+              documentId: "acc2-img",
+              url: "https://images.unsplash.com/photo-1510511459019-5dda7724fd87?w=700&q=80",
+              alternativeText: "Threat Detection",
+              name: "tdr-img",
+            },
+          },
+          {
+            id: "item-4",
+            icon: "Code2",
+            heading: "Application Security",
+            description:
+              "Advanced SIEM and SOAR integration that detects, correlates, and responds to threats in real time.",
+            points: [
+              { id: "p4", point: "Real-time threat intelligence" },
+              { id: "p5", point: "Automated incident playbooks" },
+              { id: "p6", point: "Mean time to detect < 10 min" },
+            ],
+            image: {
+              id: "acc2",
+              documentId: "acc2-img",
+              url: "https://images.unsplash.com/photo-1510511459019-5dda7724fd87?w=700&q=80",
+              alternativeText: "Threat Detection",
+              name: "tdr-img",
             },
           },
         ],

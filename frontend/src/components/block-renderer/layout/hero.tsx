@@ -9,7 +9,7 @@ import HighlightHeading from "./section-heading";
 export function Hero(data: Readonly<HeroProps>) {
   if (!data) return null;
   const { text, image, locale } = data;
-  const video = "/herovideo.mp4";
+  const video = "https://deciphi-pull-zone.b-cdn.net/herovideo.mp4";
 
   return (
     <section
