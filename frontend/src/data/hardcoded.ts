@@ -2652,7 +2652,7 @@ export const hardcodedServicePagesAr: Record<
         largeImage: {
           id: "li2",
           documentId: "assessment-large",
-          url: "https://deciphi-pull-zone.b-cdn.net/3099de0aa477b5af3188bed9d56541638939a9ae_6870eb3ff1.avif",
+          url: "https://deciphi-pull-zone.b-cdn.net/pexels-yankrukov-7691720.jpg",
           alternativeText: "تقييم الأمن",
           name: "assessment-large.jpg",
         },
@@ -2837,7 +2837,7 @@ export const hardcodedServicePagesAr: Record<
         largeImage: {
           id: "li4",
           documentId: "integration-large",
-          url: "https://deciphi-pull-zone.b-cdn.net/65e163ee818a060ecccc5290_breachsight-scanlines%25401.5x.png.png",
+          url: "https://deciphi-pull-zone.b-cdn.net/systemintegration.jpg",
           alternativeText: "تكامل الأنظمة",
           name: "integration-large.jpg",
         },
@@ -3026,7 +3026,7 @@ export const hardcodedServicePagesAr: Record<
         cardImage: {
           id: "ci6",
           documentId: "cloud-card",
-          url: "https://images.unsplash.com/photo-1544197150-b99a580bb7a8?w=600&q=80",
+          url: "https://deciphi-pull-zone.b-cdn.net/cloud.avif",
           alternativeText: "البنية التحتية السحابية",
           name: "cloud-card.jpg",
         },
