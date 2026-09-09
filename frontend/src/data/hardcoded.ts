@@ -1004,7 +1004,8 @@ export const hardcodedServicePages: Record<
           "We don't just identify the gaps — we help you close them with confidence.",
         boldtext: [
           { id: 1, text: "Strategy that ", highlight: false },
-          { id: 2, text: "drives results.", highlight: true },
+          { id: 2, text: "drives.   ", highlight: false },
+          { id: 2, text: "results.", highlight: true },
         ],
         heading2: [
           { id: 1, text: "What we ", highlight: false },
@@ -1048,25 +1049,25 @@ export const hardcodedServicePages: Record<
             id: "sc1",
             name: "Security Programme Design",
             desc: "End-to-end design of a security programme tailored to your organisation's risk profile.",
-            icon: "IconConsulting",
+            icon: "Wallpaper",
           },
           {
             id: "sc2",
             name: "Risk Assessment",
             desc: "Identify, quantify, and prioritise risks across your entire attack surface.",
-            icon: "IconAssessment",
+            icon: "NotebookPen",
           },
           {
             id: "sc3",
             name: "Governance Framework",
             desc: "Policies, procedures, and controls aligned to ISO 27001, NIST, and NCA ECC.",
-            icon: "Shield",
+            icon: "Landmark",
           },
           {
             id: "sc4",
             name: "Executive Advisory",
             desc: "Board-ready reporting and CISO advisory services for leadership teams.",
-            icon: "FileText",
+            icon: "Info",
           },
         ],
       },
@@ -1087,15 +1088,19 @@ export const hardcodedServicePages: Record<
         updatedAt: "",
         label: "Our Services",
         heading: [
-          { id: 1, text: "Penetration Testing ", highlight: false },
-          { id: 2, text: "& Vulnerability Assessment", highlight: true },
+          {
+            id: 1,
+            text: "Penetration Testing & Vulnerability   ",
+            highlight: false,
+          },
+          { id: 2, text: "    Assessment", highlight: true },
         ],
         description:
           "Thorough evaluation of your infrastructure to uncover and remediate security gaps before attackers exploit them — delivered to organisations across Qatar.",
         quote: "Know your vulnerabilities before your adversaries do.",
         boldtext: [
           { id: 1, text: "Find gaps. ", highlight: false },
-          { id: 2, text: "Fix them fast.", highlight: true },
+          { id: 2, text: " Fix them fast.", highlight: true },
         ],
         heading2: [
           { id: 1, text: "Testing ", highlight: false },
@@ -1123,7 +1128,7 @@ export const hardcodedServicePages: Record<
         largeImage: {
           id: "li2",
           documentId: "assessment-large",
-          url: "https://deciphi-pull-zone.b-cdn.net/3099de0aa477b5af3188bed9d56541638939a9ae_6870eb3ff1.avif",
+          url: "https://deciphi-pull-zone.b-cdn.net/pexels-yankrukov-7691720.jpg",
           alternativeText: "Security assessment",
           name: "assessment-large.jpg",
         },
@@ -1139,25 +1144,25 @@ export const hardcodedServicePages: Record<
             id: "sc1",
             name: "Penetration Testing",
             desc: "Manual exploitation by certified testers to validate real-world impact.",
-            icon: "IconAssessment",
+            icon: "BugPlay",
           },
           {
             id: "sc2",
             name: "Vulnerability Assessment",
             desc: "Automated and manual scanning to identify known weaknesses across your estate.",
-            icon: "Bug",
+            icon: "NotebookPenIcon",
           },
           {
             id: "sc3",
             name: "Red Team Operations",
             desc: "Full-scope adversary simulation targeting people, processes, and technology.",
-            icon: "ShieldAlert",
+            icon: "ShieldHalf",
           },
           {
             id: "sc4",
             name: "Cloud Security Review",
             desc: "Configuration and architecture review of your AWS, Azure, or GCP environments.",
-            icon: "IconCloud",
+            icon: "Cloud",
           },
         ],
       },
@@ -1186,8 +1191,8 @@ export const hardcodedServicePages: Record<
         quote:
           "Your people are either your greatest vulnerability or your strongest defence. We make them the latter.",
         boldtext: [
-          { id: 1, text: "Build a ", highlight: false },
-          { id: 2, text: "security culture.", highlight: true },
+          { id: 1, text: "Build a security ", highlight: false },
+          { id: 2, text: " culture.", highlight: true },
         ],
         heading2: [
           { id: 1, text: "Training ", highlight: false },
@@ -1234,13 +1239,13 @@ export const hardcodedServicePages: Record<
             id: "sc1",
             name: "Phishing Simulations",
             desc: "Realistic phishing campaigns to measure and improve employee resilience.",
-            icon: "Mail",
+            icon: "Bug",
           },
           {
             id: "sc2",
             name: "Awareness Modules",
             desc: "Short, engaging modules covering password hygiene, social engineering, and more.",
-            icon: "IconTraining",
+            icon: "Megaphone",
           },
           {
             id: "sc3",
@@ -1309,7 +1314,7 @@ export const hardcodedServicePages: Record<
         largeImage: {
           id: "li4",
           documentId: "integration-large",
-          url: "https://deciphi-pull-zone.b-cdn.net/65e163ee818a060ecccc5290_breachsight-scanlines%25401.5x.png.png",
+          url: "https://deciphi-pull-zone.b-cdn.net/systemintegration.jpg",
           alternativeText: "System integration",
           name: "integration-large.jpg",
         },
@@ -1417,7 +1422,7 @@ export const hardcodedServicePages: Record<
             id: "sc1",
             name: "Asset Discovery",
             desc: "Passive discovery and inventory of all OT assets without disrupting operations.",
-            icon: "IconOT",
+            icon: "HandCoins",
           },
           {
             id: "sc2",
@@ -1463,8 +1468,9 @@ export const hardcodedServicePages: Record<
           "Securing your cloud workloads, identities, and data across AWS, Azure, and Microsoft 365 environments — for businesses in Qatar.",
         quote: "The cloud moves fast. Your security needs to move faster.",
         boldtext: [
-          { id: 1, text: "Secure cloud, ", highlight: false },
-          { id: 2, text: "every layer.", highlight: true },
+          { id: 1, text: "Secure", highlight: false },
+          { id: 1, text: "cloud ", highlight: true },
+          { id: 2, text: "every layer.", highlight: false },
         ],
         heading2: [
           { id: 1, text: "Cloud security ", highlight: false },
@@ -1499,7 +1505,7 @@ export const hardcodedServicePages: Record<
         cardImage: {
           id: "ci6",
           documentId: "cloud-card",
-          url: "https://images.unsplash.com/photo-1544197150-b99a580bb7a8?w=600&q=80",
+          url: "https://deciphi-pull-zone.b-cdn.net/cloud.avif",
           alternativeText: "Cloud infrastructure",
           name: "cloud-card.jpg",
         },
@@ -1508,7 +1514,7 @@ export const hardcodedServicePages: Record<
             id: "sc1",
             name: "CSPM",
             desc: "Continuous monitoring of cloud configurations to detect and remediate misconfigurations.",
-            icon: "IconCloud",
+            icon: "Monitor",
           },
           {
             id: "sc2",
@@ -1520,7 +1526,7 @@ export const hardcodedServicePages: Record<
             id: "sc3",
             name: "Container Security",
             desc: "Security scanning and runtime protection for containerised workloads.",
-            icon: "Database",
+            icon: "Container",
           },
           {
             id: "sc4",
@@ -1533,7 +1539,6 @@ export const hardcodedServicePages: Record<
     ],
   },
 };
-
 
 // ===========================================================================
 // ARABIC (ar) VERSIONS
@@ -2535,7 +2540,10 @@ export const hardcodedServicePagesAr: Record<
           { id: "p1", point: "تصميم شامل لبرنامج الأمن" },
           { id: "p2", point: "تحديد شهية المخاطر وتسامحها" },
           { id: "p3", point: "تطوير إطار حوكمة الأمن" },
-          { id: "p4", point: "التقارير والمقاييس الأمنية على مستوى مجلس الإدارة" },
+          {
+            id: "p4",
+            point: "التقارير والمقاييس الأمنية على مستوى مجلس الإدارة",
+          },
           { id: "p5", point: "ترتيب أولويات خارطة الطريق وتخطيط الميزانية" },
         ],
         paragraphs: [
@@ -2704,8 +2712,7 @@ export const hardcodedServicePagesAr: Record<
         ],
         description:
           "مكّن فريقك بتدريب عملي يحوّل موظفيك إلى خط الدفاع الأول — مبني للمؤسسات في قطر.",
-        quote:
-          "موظفوك إما أكبر ثغراتك أو أقوى دفاعاتك. نجعلهم الأخير.",
+        quote: "موظفوك إما أكبر ثغراتك أو أقوى دفاعاتك. نجعلهم الأخير.",
         boldtext: [
           { id: 1, text: "بنيان ", highlight: false },
           { id: 2, text: "ثقافة أمنية.", highlight: true },
@@ -2717,7 +2724,10 @@ export const hardcodedServicePagesAr: Record<
         points: [
           { id: "p1", point: "حملات محاكاة التصيد الاحتيالي" },
           { id: "p2", point: "وحدات التوعية الأمنية حسب الدور" },
-          { id: "p3", point: "إحاطات الأمن السيبراني للتنفيذيين ومجلس الإدارة" },
+          {
+            id: "p3",
+            point: "إحاطات الأمن السيبراني للتنفيذيين ومجلس الإدارة",
+          },
           { id: "p4", point: "تمارين محاكاة الاستجابة للحوادث" },
           { id: "p5", point: "تدريب الامتثال والتنظيم" },
         ],
@@ -2887,8 +2897,7 @@ export const hardcodedServicePagesAr: Record<
         ],
         description:
           "حماية بيئات التقنيات التشغيلية من التهديدات السيبرانية التي تستهدف أنظمة التحكم الصناعي — للمؤسسات في قطر والخليج.",
-        quote:
-          "الأنظمة الصناعية تتطلب أماناً صناعياً — مصمماً خصيصاً لـ OT.",
+        quote: "الأنظمة الصناعية تتطلب أماناً صناعياً — مصمماً خصيصاً لـ OT.",
         boldtext: [
           { id: 1, text: "أمّن ", highlight: false },
           { id: 2, text: "عملياتك.", highlight: true },

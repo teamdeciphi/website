@@ -90,6 +90,16 @@ import {
   ShieldAlert,
   MonitorCog,
   Bolt,
+  Wallpaper,
+  NotebookPen,
+  Landmark,
+  Info,
+  Megaphone,
+  HandCoins,
+  ShieldHalf,
+  BugPlay,
+  NotebookPenIcon,
+  Container,
 } from "lucide-react";
 
 export const IconMap = {
@@ -119,6 +129,16 @@ export const IconMap = {
   ShieldAlert,
   MonitorCog,
   Bolt,
+  Wallpaper,
+  NotebookPen,
+  Landmark,
+  Info,
+  Megaphone,
+  HandCoins,
+  ShieldHalf,
+  BugPlay,
+  NotebookPenIcon,
+  Container,
 } as const;
 
 export type IconName = keyof typeof IconMap;
