@@ -18,7 +18,7 @@ const languageConfig = {
   },
   ar: {
     label: "العربية",
-    flag: "🇦🇪",
+    flag: "🇶🇦",
   },
 };
 

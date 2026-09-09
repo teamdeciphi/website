@@ -33,6 +33,30 @@ export async function generateMetadata({
 
   const page = await getPage(slug, locale);
 
+  // Use explicit SEO data if present
+  if (page?.seo?.metaTitle) {
+    const formattedSlug = slug
+      .map((s) =>
+        s
+          .toLowerCase()
+          .replace(/\s+/g, "-")
+          .replace(/[^\w-]+/g, ""),
+      )
+      .join("/");
+    const url = `${BASE_URL}/${locale}/${formattedSlug}`;
+    return {
+      title: page.seo.metaTitle,
+      description: page.seo.metaDescription,
+      alternates: { canonical: url },
+      openGraph: {
+        title: page.seo.metaTitle,
+        description: page.seo.metaDescription,
+        url,
+        type: "website",
+      },
+    };
+  }
+
   const block = (
     page?.blocks as
       | { __component: string; heading?: string | { children: { text: string }[] }[] }[]

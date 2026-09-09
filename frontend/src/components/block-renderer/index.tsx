@@ -1,7 +1,7 @@
 import type { Block } from "@/types";
 
 import { Hero } from "@/components/block-renderer/layout/hero";
-import AboutSection from "./layout/AboutUs";
+// import AboutSection from "./layout/AboutUs";
 import ServiceSection from "./layout/services-section";
 import SolutionSection from "./layout/solution-section";
 import WhyChoosUsSection from "./layout/why-choose-us";
@@ -13,8 +13,8 @@ function blockRenderer(block: Block, index: number, locale: string) {
       return <Hero key={index} {...block} locale={locale} />;
     case "layout.choose-us-section":
       return <WhyChoosUsSection key={index} {...block} />;
-    case "layout.content-with-image":
-      return <AboutSection key={index} {...block} />;
+    // case "layout.content-with-image":
+    // return <AboutSection key={index} {...block} />;
     case "layout.price-grid":
       return <ServiceSection key={index} {...block} />;
     case "layout.card-grid":

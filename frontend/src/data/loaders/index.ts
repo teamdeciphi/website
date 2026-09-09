@@ -1,19 +1,36 @@
 import {
   hardcodedGlobalData,
+  hardcodedGlobalDataAr,
   hardcodedLandingPage,
+  hardcodedLandingPageAr,
   hardcodedBlogPosts,
+  hardcodedBlogPostsAr,
   hardcodedCategories,
+  hardcodedCategoriesAr,
   hardcodedServicePages,
+  hardcodedServicePagesAr,
 } from "@/data/hardcoded";
 
 const PAGE_SIZE = 4;
 
-export async function getGlobalPageData(_locale: string) {
-  return hardcodedGlobalData;
+// ---------------------------------------------------------------------------
+// Helpers
+// ---------------------------------------------------------------------------
+
+function isAr(locale: string) {
+  return locale === "ar";
 }
 
-export async function getLandingPage(_locale: string) {
-  return hardcodedLandingPage;
+// ---------------------------------------------------------------------------
+// Loaders
+// ---------------------------------------------------------------------------
+
+export async function getGlobalPageData(locale: string) {
+  return isAr(locale) ? hardcodedGlobalDataAr : hardcodedGlobalData;
+}
+
+export async function getLandingPage(locale: string) {
+  return isAr(locale) ? hardcodedLandingPageAr : hardcodedLandingPage;
 }
 
 export async function getAllPagesSlugs() {
@@ -24,22 +41,26 @@ export async function getAllPagesSlugs() {
 export async function getPageBySlug(
   slug: string,
   _status: string,
-  _locale: string,
+  locale: string,
 ) {
-  const page = hardcodedServicePages[slug] ?? null;
-  return { data: page ? [page] : [] };
+  const pages = isAr(locale) ? hardcodedServicePagesAr : hardcodedServicePages;
+  const page = pages[slug] ?? null;
+  if (!page) return { data: [] };
+  // Return seo at top level alongside blocks so generateMetadata can access it
+  return { data: [{ seo: page.seo ?? null, blocks: page.blocks }] };
 }
 
-export async function getCategories(_locale: string) {
-  return hardcodedCategories;
+export async function getCategories(locale: string) {
+  return isAr(locale) ? hardcodedCategoriesAr : hardcodedCategories;
 }
 
 export async function getBlogPostBySlug(
   slug: string,
   _status: string,
-  _locale: string,
+  locale: string,
 ) {
-  const post = hardcodedBlogPosts.find((p) => p.slug === slug) ?? null;
+  const posts = isAr(locale) ? hardcodedBlogPostsAr : hardcodedBlogPosts;
+  const post = posts.find((p) => p.slug === slug) ?? null;
   return { data: post ? [post] : [] };
 }
 
@@ -56,8 +77,10 @@ export async function getBlogPosts({
   queryString,
   category,
   slug,
+  locale,
 }: BlogParams) {
-  let posts = [...hardcodedBlogPosts];
+  const source = isAr(locale) ? hardcodedBlogPostsAr : hardcodedBlogPosts;
+  let posts = [...source];
 
   if (queryString) {
     const q = queryString.toLowerCase();

@@ -48,7 +48,7 @@ export default function AboutSection({ ...data }: Readonly<AboutUsProps>) {
                 <div key={i}>
                   <dt className="sr-only">{stat.label}</dt>
 
-                  <dd className="text-2xl font-bold leading-none text-white/20">
+                  <dd className="text-2xl font-bold leading-none text-white/50">
                     {stat.value}
                   </dd>
 

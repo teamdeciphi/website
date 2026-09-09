@@ -8,7 +8,7 @@ export function generateOrganizationSchema(locale: string) {
     url: `${BASE_URL}/${locale}`,
     logo: `${BASE_URL}/deciphi-logo.svg`,
     description:
-      "Deciphi delivers cutting-edge cybersecurity solutions to protect your organisation from evolving threats.",
+      "Deciphi delivers practical cybersecurity solutions to protect your organisation from evolving threats.",
     address: {
       "@type": "PostalAddress",
       addressCountry: "QA",

@@ -199,6 +199,23 @@ const ContactSection = ({ locale }: { locale: string }) => {
                 ? "تواصل مع خبراء الأمن السيبراني لدينا للحصول على حلول مصممة خصيصًا لتأمين أعمالك."
                 : "Reach out to our cybersecurity experts for tailored solutions to secure your business."}
             </Typography>
+
+            {/* Location info — Qatar/Doha visible text */}
+            {locale !== "ar" && (
+              <div className="mt-2 flex flex-col gap-3 text-sm text-gray-500">
+                <div className="flex items-center gap-2">
+                  <span className="inline-block w-2 h-2 rounded-full bg-[#9B2521]" />
+                  <span>
+                    <strong className="text-gray-700">Based in Doha, Qatar</strong>
+                    {" — local team, on site when it matters."}
+                  </span>
+                </div>
+                <div className="flex items-center gap-2">
+                  <span className="inline-block w-2 h-2 rounded-full bg-[#9B2521]" />
+                  <span>We serve businesses across Qatar and the GCC.</span>
+                </div>
+              </div>
+            )}
           </header>
 
           <Card className="w-full bg-white shadow-lg rounded-xl overflow-path border-none">
