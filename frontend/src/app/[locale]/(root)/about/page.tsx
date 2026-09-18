@@ -235,51 +235,6 @@ export default async function AboutPage({ params }: PageProps) {
         </div>
       </section>
 
-      {/* ── What we are not ── */}
-      <section
-        aria-labelledby="not-heading"
-        className="py-20 lg:py-28 px-5 md:px-8 lg:px-12 bg-white"
-      >
-        <div className="max-w-7xl mx-auto">
-          <OverLine label="Transparency" className="mb-8" />
-          <HighlightHeading
-            id="not-heading"
-            segments={[
-              { text: "What we ", highlight: false },
-              { text: "are not", highlight: true },
-            ]}
-            className="text-4xl md:text-5xl font-bold text-gray-900 mb-4"
-          />
-          <Typography
-            variant="body-lg"
-            className="text-gray-600 mb-12 max-w-2xl"
-          >
-            We would rather you heard this from us than discovered it later.
-          </Typography>
-
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            {notItems.map((item) => (
-              <div
-                key={item.title}
-                className="bg-[#F7F6F2] rounded-2xl p-7 border border-gray-100"
-              >
-                <div className="flex items-start gap-3 mb-4">
-                  <span className="mt-1 w-5 h-5 rounded-full bg-[#C0392B]/10 flex items-center justify-center shrink-0">
-                    <Check className="w-3 h-3 text-[#C0392B]" />
-                  </span>
-                  <h3 className="text-base font-bold text-gray-900 leading-snug">
-                    {item.title}
-                  </h3>
-                </div>
-                <p className="text-sm text-gray-600 leading-relaxed pl-8">
-                  {item.body}
-                </p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
       {/* ── How we work with smaller businesses: reuse WhyChooseUsSection ── */}
       <WhyChooseUsSection {...whyData} />
 
