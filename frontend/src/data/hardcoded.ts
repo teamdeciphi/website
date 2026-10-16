@@ -495,7 +495,7 @@ export const hardcodedLandingPage = {
             image: {
               id: "acc3",
               documentId: "acc3-img",
-              url: "https://deciphi-pull-zone.b-cdn.net/lewis-kang-ethe-ngugi-f5pTwLHCsAg-unsplash.jpg",
+              url: "https://deciphiqatar-cdn.b-cdn.net/deciphi-datasecurity.webp",
               alternativeText: "Compliance",
               name: "compliance-img",
             },
@@ -514,7 +514,7 @@ export const hardcodedLandingPage = {
             image: {
               id: "acc2",
               documentId: "acc2-img",
-              url: "https://deciphi-pull-zone.b-cdn.net/tai-bui-0FNgdyStfFw-unsplash.jpg",
+              url: "https://deciphiqatar-cdn.b-cdn.net/deciphi-endpoint%20security.png",
               alternativeText: "Threat Detection",
               name: "tdr-img",
             },
@@ -533,7 +533,7 @@ export const hardcodedLandingPage = {
             image: {
               id: "acc2",
               documentId: "acc2-img",
-              url: "https://deciphi-pull-zone.b-cdn.net/hazel-z-FocSgUZ10JM-unsplash.jpg",
+              url: "https://deciphiqatar-cdn.b-cdn.net/cloudsecurity%20deciphi%20qatar.jpeg",
               alternativeText: "Threat Detection",
               name: "tdr-img",
             },
@@ -552,7 +552,7 @@ export const hardcodedLandingPage = {
             image: {
               id: "acc2",
               documentId: "acc2-img",
-              url: "https://deciphi-pull-zone.b-cdn.net/petter-lagson-z-upQITw4fY-unsplash.jpg",
+              url: "https://deciphiqatar-cdn.b-cdn.net/qatar-best-cybersecurity.jpg",
               alternativeText: "Threat Detection",
               name: "tdr-img",
             },
@@ -577,7 +577,7 @@ export const hardcodedLandingPage = {
         image: {
           id: "w1",
           documentId: "why-img",
-          url: "https://deciphi-pull-zone.b-cdn.net/question-mark-icon-solving-problem-solution-concept.jpg",
+          url: "https://deciphiqatar-cdn.b-cdn.net/qatar-cyber-security.jpg",
           alternativeText: "Security experts at work",
           name: "why-img",
         },
