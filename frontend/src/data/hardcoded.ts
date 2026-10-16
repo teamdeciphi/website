@@ -345,14 +345,14 @@ export const hardcodedLandingPage = {
                 id: "sc2i1",
                 documentId: "sc2-img1",
 
-                url: "https://deciphi-pull-zone.b-cdn.net/3099de0aa477b5af3188bed9d56541638939a9ae_6870eb3ff1.avif",
+                url: "https://deciphiqatar-cdn.b-cdn.net/3099de0aa477b5af3188bed9d56541638939a9ae_6870eb3ff1.avif",
                 alternativeText: "Assessment",
                 name: "assessment-img1",
               },
               {
                 id: "sc2i2",
                 documentId: "sc2-img2",
-                url: "https://deciphi-pull-zone.b-cdn.net/pexels_thisisengineering_3862383_scaled_e1756632630839_04150bba09.avif",
+                url: "https://deciphiqatar-cdn.b-cdn.net/pexels_thisisengineering_3862383_scaled_e1756632630839_04150bba09.avif",
                 alternativeText: "Assessment 2",
                 name: "assessment-img2",
               },
@@ -369,7 +369,7 @@ export const hardcodedLandingPage = {
               {
                 id: "sc3i1",
                 documentId: "sc3-img",
-                url: "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=700&q=80",
+                url: "https://deciphiqatar-cdn.b-cdn.net/photo-1516321318423-f06f85e504b3.jpeg",
                 alternativeText: "Training",
                 name: "training-img",
               },
@@ -386,7 +386,7 @@ export const hardcodedLandingPage = {
               {
                 id: "sc4i1",
                 documentId: "sc4-img",
-                url: "https://deciphi-pull-zone.b-cdn.net/65e163ee818a060ecccc5290_breachsight-scanlines%25401.5x.png.png",
+                url: "https://deciphiqatar-cdn.b-cdn.net/65e163ee818a060ecccc5290_breachsight-scanlines%25401.5x.png.png",
                 alternativeText: "Managed Security",
                 name: "managed-security-img",
               },
@@ -403,7 +403,7 @@ export const hardcodedLandingPage = {
               {
                 id: "sc5i1",
                 documentId: "sc5-img",
-                url: "https://images.unsplash.com/photo-1518770660439-4636190af475?w=500&q=80",
+                url: "https://deciphiqatar-cdn.b-cdn.net/photo-1518770660439-4636190af475.jpeg",
                 alternativeText: "OT Security",
                 name: "ot-security-img",
               },
@@ -420,7 +420,7 @@ export const hardcodedLandingPage = {
               {
                 id: "sc6i1",
                 documentId: "sc6-img",
-                url: "https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=500&q=80",
+                url: "https://deciphiqatar-cdn.b-cdn.net/photo-1451187580459-43490279c0fa.jpeg",
                 alternativeText: "Cloud Security",
                 name: "cloud-security-img",
               },
@@ -457,7 +457,7 @@ export const hardcodedLandingPage = {
             image: {
               id: "acc1",
               documentId: "acc1-img",
-              url: "https://images.unsplash.com/photo-1614064641938-3bbee52942c7?w=700&q=80",
+              url: "https://deciphiqatar-cdn.b-cdn.net/photo-1614064641938-3bbee52942c7.jpeg",
               alternativeText: "Zero-Trust Architecture",
               name: "zt-img",
             },
@@ -476,7 +476,7 @@ export const hardcodedLandingPage = {
             image: {
               id: "acc2",
               documentId: "acc2-img",
-              url: "https://deciphi-pull-zone.b-cdn.net/albert-stoynov-dyUp7WPu5q4-unsplash.jpg",
+              url: "https://deciphiqatar-cdn.b-cdn.net/albert-stoynov-dyUp7WPu5q4-unsplash.jpg",
               alternativeText: "Threat Detection",
               name: "tdr-img",
             },
