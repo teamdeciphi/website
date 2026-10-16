@@ -11,12 +11,6 @@ const nextConfig: NextConfig = {
     }),
     remotePatterns: [
       {
-        protocol: "http",
-        hostname: "3.110.86.248",
-        port: "1337",
-        pathname: "/uploads/**",
-      },
-      {
         protocol: "https",
         hostname: "images.unsplash.com",
       },
@@ -26,7 +20,7 @@ const nextConfig: NextConfig = {
       },
       {
         protocol: "https",
-        hostname: "deciphi-pull-zone.b-cdn.net",
+        hostname: "deciphiqatar-cdn.b-cdn.net",
       },
       {
         protocol: "https",
