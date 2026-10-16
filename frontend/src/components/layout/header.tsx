@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import { ChevronDown, ChevronRight, Menu, X } from "lucide-react";
 import Link from "next/link";
 import { StrapiImage } from "@/components/custom/StrapiImage";
@@ -22,22 +22,24 @@ interface HeaderProps {
 function MobileSubmenu({
   items,
   isOpen,
+  onClose,
 }: {
   items?: SubNav[];
   isOpen: boolean;
+  onClose: () => void;
 }) {
   if (!isOpen || !items?.length) return null;
 
   return (
     <div className="overflow-hidden">
       <div className="mx-3 mt-1 mb-2 pl-3 border-l-2 border-[#8B1A1A]/40 flex flex-col">
-        {items.map((sub, i) => {
+        {items.map((sub) => {
           const Icon = getIcon(sub.icon as IconName);
 
           const href = sub.href ?? "#";
 
           return (
-            <Link key={sub.name} href={href} prefetch={false}>
+            <Link key={sub.name} href={href} prefetch={false} onClick={onClose}>
               <div
                 className="flex items-center gap-3 px-3 py-2.5 rounded-xl
                 text-white/70 hover:text-white hover:bg-white/10
@@ -78,6 +80,31 @@ export default function Navigation({ data, locale }: HeaderProps) {
   const [hidden, setHidden] = useState(false);
   const path = usePathname();
   const isHome = path === `/${locale}` || path === `/${locale}/`;
+  const menuRef = useRef<HTMLElement>(null);
+
+  // Close mobile menu when route changes
+  useEffect(() => {
+    setMobileOpen(false);
+    setMobileExpanded(null);
+  }, [path]);
+
+  // Close mobile menu on outside click
+  useEffect(() => {
+    if (!mobileOpen) return;
+    const handleOutsideClick = (e: MouseEvent) => {
+      if (menuRef.current && !menuRef.current.contains(e.target as Node)) {
+        setMobileOpen(false);
+        setMobileExpanded(null);
+      }
+    };
+    document.addEventListener("mousedown", handleOutsideClick);
+    return () => document.removeEventListener("mousedown", handleOutsideClick);
+  }, [mobileOpen]);
+
+  const closeMobileMenu = () => {
+    setMobileOpen(false);
+    setMobileExpanded(null);
+  };
 
   useEffect(() => {
     let lastY = window.scrollY;
@@ -103,6 +130,7 @@ export default function Navigation({ data, locale }: HeaderProps) {
 
   return (
     <header
+      ref={menuRef}
       className={`fixed top-0 left-0 right-0 z-50 transition-transform duration-300 ease-out ${
         hidden ? "-translate-y-full" : "translate-y-0"
       }`}
@@ -281,6 +309,7 @@ export default function Navigation({ data, locale }: HeaderProps) {
                         <MobileSubmenu
                           items={item.subnav}
                           isOpen={isExpanded}
+                          onClose={closeMobileMenu}
                         />
                       </>
                     ) : (
@@ -290,6 +319,7 @@ export default function Navigation({ data, locale }: HeaderProps) {
                             ? `/${locale}${item.href}`
                             : (item.href ?? "#")
                         }
+                        onClick={closeMobileMenu}
                         className="block w-full px-4 py-3 text-sm text-white/80 hover:bg-white/8 rounded-xl"
                       >
                         {item.text}
@@ -302,6 +332,7 @@ export default function Navigation({ data, locale }: HeaderProps) {
               <div className="mt-3 pt-3 border-t border-white/10">
                 <Link
                   href={`/${locale}/contact`}
+                  onClick={closeMobileMenu}
                   className="w-full text-white font-medium overflow-hidden shadow-lg bg-[radial-gradient(circle_at_30%_30%,#AC1B1B_0%,#731212_52%,#460B0B_95%)] hover:brightness-110  inline-flex items-center justify-center h-9 px-4 py-2 rounded-md text-sm transition-colors"
                 >
                   {locale === "ar" ? "اتصل بنا" : "Contact"}
