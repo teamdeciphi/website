@@ -114,7 +114,7 @@ export default async function AboutPage({ params }: PageProps) {
     cardImage: {
       id: "about-img",
       documentId: "about-img",
-      url: "https://images.unsplash.com/photo-1560264418-c4445382edbc?q=80&w=2940&auto=format&fit=crop",
+      url: "https://deciphiqatar-cdn.b-cdn.net/photo-1560264418-c4445382edbc.avif",
       alternativeText: "Deciphi cybersecurity team at work",
       name: "about-image",
     },
@@ -139,7 +139,7 @@ export default async function AboutPage({ params }: PageProps) {
     image: {
       id: "why-img",
       documentId: "why-img",
-      url: "https://images.unsplash.com/photo-1573164713714-d95e436ab8d6?w=800&q=80",
+      url: "https://deciphiqatar-cdn.b-cdn.net/photo-1573164713714-d95e436ab8d6.jpeg",
       alternativeText: "Security experts collaborating",
       name: "why-img",
     },
